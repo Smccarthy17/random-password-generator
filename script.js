@@ -12,7 +12,8 @@ function generatePassword() {
     var length = prompt("Enter Number of characters between 8-128.");
     console.log (length);
     var finalPassword = ""
-    
+    } 
+
     if (length < 8 || length > 128) {
       alert("Choose a number between 8 and 128");
       return (" ")
@@ -26,10 +27,37 @@ function generatePassword() {
     //Variables to confirm characters//
     var isLowercase = confirm("Do you want to use lower case letters? Click 'OK' for Yes and 'Cancel' for No.");
     var isUppercase = confirm("Do you want to use upper case letters? Click 'OK' for Yes and 'Cancel' for No.");
-    var isANumber = confirm("Do you want to use a number? Click 'OK' for Yes and 'Cancel for No.");
+    var isANumber = confirm("Do you want to use a number? Click 'OK' for Yes and 'Cancel' for No.");
     var isSpecialChar = confirm("Do you want to use a special character? Click 'OK' for Yes and 'Cancel' for No.");
 
-    //Empty array for all usableChars concatinated//
+    //Empty array for all usableChars concatinated below//
     var usableChars = []
 
+    if (isLowercase){
+        finalPassword +=
+           lowerCase[Math.floor(Math.random() * lowerCase.lenth)];
+           console.log(finalPassword)
+        usableChars = usableChars.concat(lowerCase);
+    }
+
+    if (isUppercase){
+        finalPassword += 
+            upperCase[Math.floor(Math.random() * upperCase.length)];
+            console.log(finalPassword);
+        usableChars = usableChars.concat(upperCase)
+    }
+
+    if (isANumber){
+        finalPassword +=
+            numbers[Math.floor(Math.random() * numbers.length)];
+            console.log(finalPassword);
+        usableChars = usableChars.concat(numbers)
+    }
+
+    if (isSpecialChar){
+        finalPassword +=
+            specialCh[Math.floor(Math.random() * specialCh.length)];
+            console.log(finalPassword);
+        usableChars = usableChars.concat(specialCh)
+    }
     
