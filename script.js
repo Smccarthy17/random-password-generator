@@ -60,4 +60,31 @@ function generatePassword() {
             console.log(finalPassword);
         usableChars = usableChars.concat(specialCh)
     }
+
+    //Confirmation minimum 1 character chosen//
+    if (!isLowercase && !isUppercase && !isANumber && !isSpecialChar) {
+        alert("Please choose at least one character option! Click GENERATE PASSWORD again.");
+
+        return (" ")
+    }
+
+    //for loop to get random elements from usableChars array//
+    for (var i = finalPassword.length; i < length; i++) {
+        finalPassword += usableChars[Math.floor(Math.random() * usableChars.length)];
+    }
+
+    return finalPassword;
+
+    //Write password to the #password//
+    function writePassword() {
+        var password = generatePassword();
+        var passwordText = document.querySelector("#password");
+
+        passwordText.value = password;
+
+    }
+
+    //Event listener to generate button//
+    generateBtn.addEventListener("click", writePassword);
+
     
