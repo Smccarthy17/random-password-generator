@@ -78,9 +78,6 @@ var finalPassword = "";
 //Function & if statements to generate password//
 function generatePassword() {
   var length = prompt("Enter Number of characters between 8-128.");
-  console.log(length);
-
-  console.log("finalPassword", finalPassword);
 
   if (length < 8 || length > 128) {
     alert("Choose a number between 8 and 128");
@@ -111,25 +108,21 @@ function generatePassword() {
 
   if (isLowercase) {
     finalPassword += lowerCase[Math.floor(Math.random() * lowerCase.length)];
-    console.log(finalPassword);
     usableChars = usableChars.concat(lowerCase);
   }
 
   if (isUppercase) {
     finalPassword += upperCase[Math.floor(Math.random() * upperCase.length)];
-    console.log(finalPassword);
     usableChars = usableChars.concat(upperCase);
   }
 
   if (isANumber) {
     finalPassword += numbers[Math.floor(Math.random() * numbers.length)];
-    console.log(finalPassword);
     usableChars = usableChars.concat(numbers);
   }
 
   if (isSpecialChar) {
     finalPassword += specialCh[Math.floor(Math.random() * specialCh.length)];
-    console.log(finalPassword);
     usableChars = usableChars.concat(specialCh);
   }
 
