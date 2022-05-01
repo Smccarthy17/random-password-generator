@@ -46,4 +46,4 @@ Deployed: https://smccarthy17.github.io/random-password-generator/
 
 GitHub Repo: https://github.com/Smccarthy17/random-password-generator.git
 
-Screenshot:
+Screenshot: ![alt= "screenshot of random password generator in use"](images/password generator.png)
