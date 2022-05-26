@@ -77,7 +77,7 @@ var generateBtn = document.querySelector("#generate");
 var finalPassword = "";
 //Function & if statements to generate password//
 function generatePassword() {
-  var length = prompt("Enter Number of characters between 8-128.");
+  var length = parseInt(prompt("Enter Number of characters between 8-128."));
 
   if (length < 8 || length > 128) {
     alert("Choose a number between 8 and 128");
